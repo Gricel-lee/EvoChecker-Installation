@@ -1,7 +1,7 @@
 # Evochecker - Virtual Machine
 Virtual Machine (Ubuntu 64bits) with Evochecker configured and loaded with SafeSCAD.
 
-- Download Virtual Machine from: https://1drv.ms/u/s!AuG9Dok_F1SMiehD2ZfDfc5l--80jg?e=gF6r68
+- Download Virtual Machine from*: https://1drv.ms/u/s!AuG9Dok_F1SMiehD2ZfDfc5l--80jg?e=gF6r68
 - The virtual machine (VM) was run using **VMWare Workstatio 16 Player** (free licence), configured to:
 
 ![image](https://user-images.githubusercontent.com/63869574/128170861-d50f6603-d6e2-407e-bfe9-4b5c43881dd7.png)
@@ -9,6 +9,8 @@ Virtual Machine (Ubuntu 64bits) with Evochecker configured and loaded with SafeS
 - Once the VM is turn on, to unlock enter the **Password**: 123456
 
 ![image](https://user-images.githubusercontent.com/63869574/128170250-eda2529f-be47-4a0f-9323-b1b7730eb53f.png)
+
+*(download all files in a folder, and select it on VMWare as the VM)
 
 ## Run Evochecker
 For more information about Evochecker, go to [1].
