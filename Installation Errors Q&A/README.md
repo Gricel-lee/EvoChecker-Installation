@@ -1,6 +1,6 @@
 # Common Problems And Solutions in the Deployment of EvoChecker
 
-## - Error: Error 5: LD_LIBRARY_PATH has not been specified.
+## - Error 5: LD_LIBRARY_PATH has not been specified.
 ![image](https://user-images.githubusercontent.com/63869574/128391061-32caa09a-e9e9-4c17-baa5-0d6a8a576637.png)
 
 
@@ -15,7 +15,10 @@ Select the run file from the **Package Explorer** (on the left). Right click > R
 
 Note: Make sure you add the Variable to the file from where Evochecker is called.
 
-## - Error: Cannot run program “/urs/lib/python”: error=13, Permission denied
+
+
+
+## - Error 13: Cannot run program “/urs/lib/python”: error=13, Permission denied
 
 Evochecker is configured properly, it evolves and generates the results, but it does not show any graph and error 13 appears:
 
