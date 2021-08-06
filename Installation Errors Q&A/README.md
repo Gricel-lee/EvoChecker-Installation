@@ -76,6 +76,20 @@ And refresh:
 ![image](https://user-images.githubusercontent.com/63869574/128541230-c858fac8-7646-4321-a9ba-164cb79f0668.png)
 
 
+## - Error: Cannot run program "/usr/local/bin/python3": error 2, No such file or directory
+
+![image](https://user-images.githubusercontent.com/63869574/128546194-093a79dd-8079-49af-affb-cfe744553ad6.png)
+
+### Solution
+Find the path to  python, for example, in Linux:
+
+![image](https://user-images.githubusercontent.com/63869574/128546444-a526a081-696f-4ed1-b276-f38ddbc7c5a0.png)
+
+Change this path in PYTHON3_DIRECTORY in the config.properties file:
+
+![image](https://user-images.githubusercontent.com/63869574/128546679-28fa7e82-69a3-4e5e-b587-2bd9cabb90fd.png)
+
+
 ## - Error 13: Cannot run program “/urs/lib/python”: error=13, Permission denied
 
 Evochecker is configured properly, it evolves and generates the results, but it does not show any graph and error 13 appears:
@@ -89,6 +103,7 @@ If this error appears, open the config.properties file, and change PYTHON3_DIREC
 Note: Open CMD or terminal and type python3 (or python), if configure properly, it should show the python version, e.g. for 3.7.9:
 
 ![image](https://user-images.githubusercontent.com/63869574/128370975-d370028c-7856-439a-be97-8adb61695379.png)
+
 
 ## - Error: [Traceback (most recent call last):,   File "scripts/plotFront3D.py", line 3, in <module>,     import pandas as pd , ModuleNotFoundError: No module named 'pandas']
 
