@@ -57,7 +57,7 @@ In this example, from multi_robot_sys_01 project:
 
 ![image](https://user-images.githubusercontent.com/63869574/128548246-42f45150-6276-4ab2-9050-37a32ab06efc.png)
 
-### Solved
+### Solution
 You must copy the **lib** folder into the (java) project from where Evochecker is called:
 
 ![image](https://user-images.githubusercontent.com/63869574/128549544-9a663dff-afd4-4977-b457-68e686761e2a.png)
