@@ -53,6 +53,22 @@ In this example, from multi_robot_sys_01 project:
 ![image](https://user-images.githubusercontent.com/63869574/128532776-3c41defc-8e13-4240-8d67-2e39ba5f647a.png)
 
 
+## - Error: LD_LIBRARY_PATH has not been specified. On Eclipse: Run > ... > Variable: LD_LIBRARU_PATH; Value: libs/runtimeModel Checking engine...
+
+![image](https://user-images.githubusercontent.com/63869574/128548246-42f45150-6276-4ab2-9050-37a32ab06efc.png)
+
+### Solved
+You must copy the **lib** folder into the (java) project from where Evochecker is called:
+
+![image](https://user-images.githubusercontent.com/63869574/128549544-9a663dff-afd4-4977-b457-68e686761e2a.png)
+
+
+Note: This lib folder contains:
+
+![image](https://user-images.githubusercontent.com/63869574/128549473-19b6f7c4-9732-43c6-9a3f-9efb64f84b16.png)
+
+
+
 ## - Error: Build path specifies execution environment JavaSE-11. There are no JRE installed…
 
 ![image](https://user-images.githubusercontent.com/63869574/128539055-6327a1fa-13c1-48fa-816e-d9942a582299.png)
