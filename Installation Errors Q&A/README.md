@@ -1,5 +1,23 @@
 # Common Problems And Solutions in the Deployment of EvoChecker
 
+## - Error: cannot import EvoChecker library.
+
+![image](https://user-images.githubusercontent.com/63869574/128541873-ccb0f642-6923-4cd0-9c3f-e96bb1df9cf5.png)
+
+### Solution
+Right click on the project from where you're calling EvoChecker, go to Build Path > Configure Build Path.
+
+![image](https://user-images.githubusercontent.com/63869574/128542353-a00d6ca4-7650-4b14-88f6-3eec01cc4b94.png)
+
+In the Projects tab, add Evochecker project into **Classpath**:
+
+![image](https://user-images.githubusercontent.com/63869574/128542762-c3ad5e95-9f1b-4f2d-8d97-8bc1a60cdff3.png)
+
+If Evochecker is called from another project, make sure to add **evochecker.** when calling the library. All the options from the module should be now available:
+
+![image](https://user-images.githubusercontent.com/63869574/128543214-5e18bf04-b32c-4e4a-985b-ba364745ca6a.png)
+
+
 ## - Error 5: LD_LIBRARY_PATH has not been specified.
 ![image](https://user-images.githubusercontent.com/63869574/128391061-32caa09a-e9e9-4c17-baa5-0d6a8a576637.png)
 
@@ -15,7 +33,47 @@ Select the run file from the **Package Explorer** (on the left). Right click > R
 
 Note: Make sure you add the Variable to the file from where Evochecker is called.
 
+## - Error: Path null is a directoryjava.io.FileNotFoundException: resources/config.properties (No such file or directory)
 
+![image](https://user-images.githubusercontent.com/63869574/128543784-ae9fe7a9-a193-4eb6-aeea-cac366d5818e.png)
+
+
+### Solution
+Copy the config.properties to a folder called resources in the project you're calling Evochecker (the one in the Evochecker project can be deleted to avoid confusion). 
+
+
+## - Error: java.io.IOException: File does not exists! /home/.../models/modelName.pm
+
+![image](https://user-images.githubusercontent.com/63869574/128531880-8fdfcaa7-2f07-4e04-9895-fb2cc2b06066.png)
+
+### Solution
+Copy the folder and files to the path it shows, in this example, the folder with the **models** must be copied to the Java project from which Evochecker is called.
+In this example, from multi_robot_sys_01 project:
+
+![image](https://user-images.githubusercontent.com/63869574/128532776-3c41defc-8e13-4240-8d67-2e39ba5f647a.png)
+
+
+## - Error: Build path specifies execution environment JavaSE-11. There are no JRE installed…
+
+![image](https://user-images.githubusercontent.com/63869574/128539055-6327a1fa-13c1-48fa-816e-d9942a582299.png)
+
+### Solution
+
+Open **Java Build Path** of the Evochecker project:
+
+![image](https://user-images.githubusercontent.com/63869574/128539518-02bf12a9-1915-4cb5-bcb7-edcf2a8edd48.png)
+
+Select another JRE version, in my case it worked with **Alternative JRE: jre**.
+
+![image](https://user-images.githubusercontent.com/63869574/128539965-b377f0a4-4115-4feb-ac69-a16dcaa4e3ca.png)
+
+Note: It may require to clean the project on the tab **Project > Clean**.
+
+![image](https://user-images.githubusercontent.com/63869574/128541153-da773398-d6ae-4ed5-a706-e058a1ad4f5b.png)
+
+And refresh:
+
+![image](https://user-images.githubusercontent.com/63869574/128541230-c858fac8-7646-4321-a9ba-164cb79f0668.png)
 
 
 ## - Error 13: Cannot run program “/urs/lib/python”: error=13, Permission denied
@@ -24,11 +82,11 @@ Evochecker is configured properly, it evolves and generates the results, but it 
 
 ![image](https://user-images.githubusercontent.com/63869574/128369738-42852e64-b3d4-4a5d-a78c-6608b5d475aa.png)
 ### Solution
-If this error appears, open the config.properties file, and change PYTHON3_DIRECTORY to the command to run python* (in my case, "python3.8")
+If this error appears, open the config.properties file, and change PYTHON3_DIRECTORY to the command to run python (in my case, "python3.8")
 
 ![image](https://user-images.githubusercontent.com/63869574/128370078-311fad50-950a-4c3b-92b3-fb6a71344adc.png)
 
-\* *Open CMD or terminal and type python3 (or python), if configure properly, it should show the python version:*
+Note: Open CMD or terminal and type python3 (or python), if configure properly, it should show the python version, e.g. for 3.7.9:
 
 ![image](https://user-images.githubusercontent.com/63869574/128370975-d370028c-7856-439a-be97-8adb61695379.png)
 
@@ -48,4 +106,9 @@ Install pandas from the CMD or terminal, e.g., for Ubuntu:
   
  
 
+## - Error: /usr/bin/python3: can't open file 'scripts/plotFront3D.py': [Errno 2] No such file or directory
+  ![image](https://user-images.githubusercontent.com/63869574/128545208-5a738952-a6ac-46e5-ae90-c1cfb877a16d.png)
+
+  ### Solution
+  This appears when the Evochecker is called from another (java) project, which does not have the python file plotFront3D.py. Temporarilly, you can copy the folder 'scripts' into the (java) project and run it again.
   
