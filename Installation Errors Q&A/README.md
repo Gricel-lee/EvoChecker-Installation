@@ -1,5 +1,8 @@
 # Common Problems And Solutions in the Deployment of EvoChecker
 
+EvoChecker can be installed directly from https://github.com/gerasimou/EvoChecker. 
+Here is a list of Errors that may appear in the installation process.
+
 ## - Error: cannot import EvoChecker library.
 
 ![image](https://user-images.githubusercontent.com/63869574/128541873-ccb0f642-6923-4cd0-9c3f-e96bb1df9cf5.png)
@@ -83,7 +86,7 @@ Select another JRE version, in my case it worked with **Alternative JRE: jre**.
 
 ![image](https://user-images.githubusercontent.com/63869574/128539965-b377f0a4-4115-4feb-ac69-a16dcaa4e3ca.png)
 
-Note: It may require to clean the project on the tab **Project > Clean**.
+Note: It may require cleaning the project on the tab **Project > Clean**.
 
 ![image](https://user-images.githubusercontent.com/63869574/128541153-da773398-d6ae-4ed5-a706-e058a1ad4f5b.png)
 
@@ -97,7 +100,7 @@ And refresh:
 ![image](https://user-images.githubusercontent.com/63869574/128546194-093a79dd-8079-49af-affb-cfe744553ad6.png)
 
 ### Solution
-Find the path to  python, for example, in Linux:
+Find the path to python, for example, in Linux:
 
 ![image](https://user-images.githubusercontent.com/63869574/128546444-a526a081-696f-4ed1-b276-f38ddbc7c5a0.png)
 
@@ -116,7 +119,7 @@ If this error appears, open the config.properties file, and change PYTHON3_DIREC
 
 ![image](https://user-images.githubusercontent.com/63869574/128370078-311fad50-950a-4c3b-92b3-fb6a71344adc.png)
 
-Note: Open CMD or terminal and type python3 (or python), if configure properly, it should show the python version, e.g. for 3.7.9:
+Note: Open CMD or terminal and type python3 (or python), if configure properly, it should show the python version, e.g., for 3.7.9:
 
 ![image](https://user-images.githubusercontent.com/63869574/128370975-d370028c-7856-439a-be97-8adb61695379.png)
 
@@ -137,9 +140,9 @@ Install pandas from the CMD or terminal, e.g., for Ubuntu:
   
  
 
-## - Error: /usr/bin/python3: can't open file 'scripts/plotFront3D.py': [Errno 2] No such file or directory
+## - Error: /usr/bin/python3: can't open file 'scripts/plotFront3D.py': [Error 2] No such file or directory
   ![image](https://user-images.githubusercontent.com/63869574/128545208-5a738952-a6ac-46e5-ae90-c1cfb877a16d.png)
 
   ### Solution
-  This appears when the Evochecker is called from another (java) project, which does not have the python file plotFront3D.py. Temporarilly, you can copy the folder 'scripts' into the (java) project and run it again.
+  This appears when the Evochecker is called from another (java) project, which does not have the python file plotFront3D.py. Temporarily, you can copy the folder 'scripts' into the (java) project and run it again.
   
