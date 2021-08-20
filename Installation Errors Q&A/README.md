@@ -13,9 +13,11 @@ Right click on the project from where you're calling EvoChecker, go to Build Pat
 
 ![image](https://user-images.githubusercontent.com/63869574/128542353-a00d6ca4-7650-4b14-88f6-3eec01cc4b94.png)
 
-In the Projects tab, add Evochecker project into **Classpath**:
+In the **Projects** tab, add Evochecker project into **Classpath**:
 
 ![image](https://user-images.githubusercontent.com/63869574/128542762-c3ad5e95-9f1b-4f2d-8d97-8bc1a60cdff3.png)
+
+Note: Do not get confuse adding it into the **Libraries** instead of **Projects** tab.
 
 If Evochecker is called from another project, make sure to add **evochecker.** when calling the library. All the options from the module should be now available:
 
