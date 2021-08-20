@@ -147,5 +147,10 @@ Install pandas from the CMD or terminal, e.g., for Ubuntu:
   ![image](https://user-images.githubusercontent.com/63869574/128545208-5a738952-a6ac-46e5-ae90-c1cfb877a16d.png)
 
   ### Solution
-  This appears when the Evochecker is called from another (java) project, which does not have the python file plotFront3D.py. Temporarily, you can copy the folder 'scripts' into the (java) project and run it again.
+  This appears when the Evochecker is called from another (java) project, which does not have the python file plotFront3D.py. Temporarily, you can copy the folder 'scripts' into the (java) project and run it again. scripts folder contains:
+  
+![image](https://user-images.githubusercontent.com/63869574/130229656-aa192232-af13-4d52-b593-78dc30000528.png)
+
+  
+
   
