@@ -20,9 +20,16 @@ For more information about Evochecker, go to [1].
 
 1) Launch Eclipse (shortcut available on Desktop) and select
    workspace: /home/evochecker/Desktop/Eclipse-EvoChecker
-2) Run "Main.java" clicking on the green circle with a white arrow symbol
-   (or on the Package Explorer, go to Evochecker > src/main/java > Main.java > Right Click > Run As > Java Application)
    
+2) Run evochecker from a main file:
+
+   - **from a different java project:**
+   On the Package Explorer, go to RunModel > com.sys > RunEvoTest.java >
+   Right Click > Run As > Java Application.
+	
+   - **from evochecker project:**
+   On the Package Explorer, go to Evochecker > src/main/java >
+   Main.java > Right Click > Run As > Java Application
 
 ### B- Change configuration
 
@@ -30,13 +37,13 @@ For more information about Evochecker, go to [1].
 2) Here you can change the model and properties files: 
      - MODEL_TEMPLATE_FILE = ...
      - PROPERTIES_FILE = ...
-     - 
+     
    the population size:
      - POPULATION_SIZE = ...
-     - 
+     
    the maximum number of evaluations:
      - MAX_EVALUATIONS = ...
-     - 
+     
    among other parameters.
    
   It comes pre-configured to run **SafeSCAD** model, as presented on [2] and discussed in [3]. Models and properties files are saved in the "models" folder and selected by the "MODEL_TEMPLATE_FILE" and "PROPERTIES_FILE" parameters, as mentioned before.
