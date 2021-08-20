@@ -1,7 +1,7 @@
 # Evochecker - Virtual Machine
 Virtual Machine (Ubuntu 64bits) with Evochecker configured and loaded with SafeSCAD.
 
-- Download Virtual Machine from*: https://1drv.ms/u/s!AuG9Dok_F1SMifBNnQLRdaZQsuMvhQ?e=e15GBk
+- Download Virtual Machine from*: https://1drv.ms/u/s!AuG9Dok_F1SMifBNnQLRdaZQsuMvhQ?e=e15GBk (download folder as a zip file)
 - The virtual machine (VM) was run using **VMWare Workstatio 16 Player** (free licence), configured to:
 
 ![image](https://user-images.githubusercontent.com/63869574/128170861-d50f6603-d6e2-407e-bfe9-4b5c43881dd7.png)
