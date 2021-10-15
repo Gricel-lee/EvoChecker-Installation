@@ -11,6 +11,12 @@ EvoChecker can be installed directly from https://github.com/gerasimou/EvoChecke
 
 Here is a list of Errors that may appear in the installation process.
 
+## - Error: 
+"Module evochecker is not accessible"
+
+### Solution
+In the java project where you are calling Evochecker, do not create (or delete) the **module-info.java** file.
+
 ## - Error: cannot import EvoChecker library.
 
 ![image](https://user-images.githubusercontent.com/63869574/128541873-ccb0f642-6923-4cd0-9c3f-e96bb1df9cf5.png)
