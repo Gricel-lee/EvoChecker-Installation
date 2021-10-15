@@ -52,6 +52,11 @@ Select the run file from the **Package Explorer** (on the left). Right click > R
 
 Note: Make sure you add the Variable to the file from where Evochecker is called.
 
+## - Error 5: LD_LIBRARY_PATH "is not recognized (or similar)".
+### Solution
+Change the Java project to the eclipse-workspace file, this may solve the problem.
+
+
 ## - Error: Path null is a directoryjava.io.FileNotFoundException: resources/config.properties (No such file or directory)
 
 ![image](https://user-images.githubusercontent.com/63869574/128543784-ae9fe7a9-a193-4eb6-aeea-cac366d5818e.png)
