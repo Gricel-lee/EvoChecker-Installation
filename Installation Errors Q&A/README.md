@@ -1,15 +1,10 @@
-# INSTALLING EVOCHECKER DIRECTLY TO YOUR PC
+# INSTALLING EVOCHECKER DIRECTLY TO YOUR PC. Common Problems And Solutions.
 Currently, Evochecker is available for macOS and Linux.
 It can be download at: https://github.com/gerasimou/EvoChecker
 
 The next section has some of the problems found in the installation of the software, as well as their solution.
 
 
-# Common Problems And Solutions in the Deployment of EvoChecker
-
-EvoChecker can be installed directly from https://github.com/gerasimou/EvoChecker. 
-
-Here is a list of Errors that may appear in the installation process.
 
 ## - Error: 
 "Module evochecker is not accessible"
