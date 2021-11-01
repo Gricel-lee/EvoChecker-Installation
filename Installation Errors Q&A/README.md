@@ -1,5 +1,5 @@
 # INSTALLING EVOCHECKER DIRECTLY TO YOUR PC
-Currently, Evochecker is available for macOS and Windows.
+Currently, Evochecker is available for macOS and Linux.
 It can be download at: https://github.com/gerasimou/EvoChecker
 
 The next section has some of the problems found in the installation of the software, as well as their solution.
