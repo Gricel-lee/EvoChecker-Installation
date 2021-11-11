@@ -6,8 +6,7 @@ The next section has some of the problems found in the installation of the softw
 
 
 
-## - Error: 
-"Module evochecker is not accessible"
+## - Error: "Module evochecker is not accessible"
 
 ### Solution
 In the java project where you are calling Evochecker, do not create (or delete) the **module-info.java** file.
