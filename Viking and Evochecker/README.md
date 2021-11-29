@@ -45,7 +45,7 @@ In LD_LIBRARY_PATH, **USER** is your Viking user; **scratch** is the design Viki
 
 [^1]: See _IMPORTANT - Run your jobs from the high performance_ section at https://wiki.york.ac.uk/display/RCS/VK1%29+How+to+access+Viking
 
-[^2]: This is neccesary as the default compiler in Viking is an old version (4.8.5), and forcing Viking to use the "libs/runtime" libraries seems that it is not working. "However, to work around this, \[download\] prism version 4.6 and \[...\] replace the prism libraries in the runtime folder", Emad Alharbi. 
+[^2]: This is neccesary as the default compiler in Viking is an old version (4.8.5), and forcing Viking to use the "libs/runtime" libraries does not seem to work. "However, to work around this, \[download\] prism version 4.6 and \[...\] replace the prism libraries in the runtime folder", Emad Alharbi. 
 
 
 ## Run file
