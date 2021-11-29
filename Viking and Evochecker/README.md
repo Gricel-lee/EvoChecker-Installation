@@ -14,6 +14,8 @@ Copy and paste the following files from Evochecker into a "scratch" subfolder[^1
 
 ![image](https://user-images.githubusercontent.com/63869574/143890128-95a3d5ef-ebf7-43b8-9c6b-44ff3a06e870.png)
 
+### Change libs folder
+
 - **Replace** the libs' subfolder, "runtime", for an older version of PRISM provided here[^2]: 
 
 ![image](https://user-images.githubusercontent.com/63869574/143891036-c50743b5-54d9-449c-a968-f3907a43f89a.png)
@@ -54,12 +56,11 @@ In LD_LIBRARY_PATH, **USER** is your Viking user; **scratch** is the design Viki
 
 - To run the shell file, use **sbatch** fileName.sh
 
-## Error
-If you get a file saying 
+## Possible Errors
+See section **Change libs folder** if you get a file saying:
 ```
 Accepting from port: 8888
 java.lang.UnsatisfiedLinkError: /mnt/lustre/users/gnvf500/EvoCheckerViking/ScadV2/libs/runtime/libprism.so: /lib64/libstdc++.so.6: version `CXXABI_1.3.8' not found (required by /mnt/lustre/users/gnvf500/EvoCheckerViking/ScadV2/libs/runtime/libprism.so)
 ```
 
-??
 
