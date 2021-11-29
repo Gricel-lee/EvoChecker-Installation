@@ -12,13 +12,13 @@
 
 Copy and paste the following files from Evochecker into a "scratch" subfolder[^1] (only the Evochecker.sh file is created in the next section).
 
-![image](https://user-images.githubusercontent.com/63869574/143892994-cbef7a77-d9de-4e6e-84c4-abcc28c19658.png)
+![image](https://user-images.githubusercontent.com/63869574/143893682-c9c60585-631c-458e-a8e8-7f3c72be841d.png)
 
 ### Change libs folder
 
 - **Replace** the "runtime" subfolder in "libs" for an older version of PRISM provided here[^2]: https://github.com/Gricel-lee/VirtualMachine-Evochecker/tree/main/Viking%20and%20Evochecker/runtime
 
-![image](https://user-images.githubusercontent.com/63869574/143891036-c50743b5-54d9-449c-a968-f3907a43f89a.png)
+![image](https://user-images.githubusercontent.com/63869574/143893629-22d0e0fc-6248-4e3d-bf0f-2a6f2c6fc4a0.png)
 
 
 ## Run Evochecker
