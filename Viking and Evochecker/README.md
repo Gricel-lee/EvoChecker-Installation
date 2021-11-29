@@ -10,13 +10,13 @@
 
 - To access/copy/paste data, see https://wiki.york.ac.uk/display/RCS/Copying+your+data+to+and+from+Viking 
 
-Copy and paste the following files from Evochecker into a "scratch" subfolder[^1]. The Evochecker.sh file is created in the next section.
+Copy and paste the following files from Evochecker into a "scratch" subfolder[^1] (only the Evochecker.sh file is created in the next section).
 
-![image](https://user-images.githubusercontent.com/63869574/143890128-95a3d5ef-ebf7-43b8-9c6b-44ff3a06e870.png)
+![image](https://user-images.githubusercontent.com/63869574/143892994-cbef7a77-d9de-4e6e-84c4-abcc28c19658.png)
 
 ### Change libs folder
 
-- **Replace** the libs' subfolder, "runtime", for an older version of PRISM provided here[^2]: 
+- **Replace** the "runtime" subfolder in "libs" for an older version of PRISM provided here[^2]: 
 
 ![image](https://user-images.githubusercontent.com/63869574/143891036-c50743b5-54d9-449c-a968-f3907a43f89a.png)
 
