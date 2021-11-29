@@ -50,7 +50,7 @@ In LD_LIBRARY_PATH, **USER** is your Viking user; **scratch** is the design Viki
 
 ![image](https://user-images.githubusercontent.com/63869574/143779349-bcbdcc6f-2159-467e-bbf7-799542f215e2.png)
 
-- To run the shell file, go to the scratch subfolder and run it as[^3]:
+- Go to the scratch subfolder where all the Evochecker files are and run it[^3]. The next example is in Windows using PuTTY:
 
 ![image](https://user-images.githubusercontent.com/63869574/143894178-ab36e910-8cb0-4a2a-87c0-6e6295b57b84.png)
 
