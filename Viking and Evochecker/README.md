@@ -10,3 +10,11 @@
 
 - To run the shell file, use **sbatch** fileName.sh
 
+## Error
+If you get a file saying 
+```
+Accepting from port: 8888
+java.lang.UnsatisfiedLinkError: /mnt/lustre/users/gnvf500/EvoCheckerViking/ScadV2/libs/runtime/libprism.so: /lib64/libstdc++.so.6: version `CXXABI_1.3.8' not found (required by /mnt/lustre/users/gnvf500/EvoCheckerViking/ScadV2/libs/runtime/libprism.so)
+```
+
+??
