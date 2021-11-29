@@ -43,18 +43,18 @@ java -jar EvoChecker.jar config.properties
 In LD_LIBRARY_PATH, **USER** is your Viking user; **scratch** is the design Viking folder to run files[^1]; **EvoCheckerViking/ScadV2/libs/runtime** is the path to the runtime folder, **config.properties** is the Evochecker properties file. 
 
 
-[^1]: See _IMPORTANT - Run your jobs from the high performance_ section at https://wiki.york.ac.uk/display/RCS/VK1%29+How+to+access+Viking
 
-[^2]: This is neccesary as the default compiler in Viking is an old version (4.8.5), and forcing Viking to use the "libs/runtime" libraries does not seem to work. "However, to work around this, \[download\] prism version 4.6 and \[...\] replace the prism libraries in the runtime folder", Emad Alharbi. 
-
-
-## Run file
+### Run .sh file
 
 - First, the .sh file must be executable so do: chmod u=rwx,g=r-x,o=r-x 
 
 ![image](https://user-images.githubusercontent.com/63869574/143779349-bcbdcc6f-2159-467e-bbf7-799542f215e2.png)
 
-- To run the shell file, use **sbatch** fileName.sh
+- To run the shell file, go to the scratch subfolder and run it as[^3]:
+
+![image](https://user-images.githubusercontent.com/63869574/143894178-ab36e910-8cb0-4a2a-87c0-6e6295b57b84.png)
+
+
 
 ## Possible Errors
 See section **Change libs folder** if you get a file saying:
@@ -64,3 +64,8 @@ java.lang.UnsatisfiedLinkError: /mnt/lustre/users/gnvf500/EvoCheckerViking/ScadV
 ```
 
 
+[^1]: See _IMPORTANT - Run your jobs from the high performance_ section at https://wiki.york.ac.uk/display/RCS/VK1%29+How+to+access+Viking
+
+[^2]: This is neccesary as the default compiler in Viking is an old version (4.8.5), and forcing Viking to use the "libs/runtime" libraries does not seem to work. "However, to work around this, \[download\] prism version 4.6 and \[...\] replace the prism libraries in the runtime folder", Emad Alharbi. 
+
+[^3]: You can also use "**sbatch** EvoChecker.sh" to sumit a job to Viking. Not tested for Evochecker yet.
