@@ -16,7 +16,7 @@ Copy and paste the following files from Evochecker into a "scratch" subfolder[^1
 
 ### Change libs folder
 
-- **Replace** the "runtime" subfolder in "libs" for an older version of PRISM provided here[^2]: 
+- **Replace** the "runtime" subfolder in "libs" for an older version of PRISM provided here[^2]: https://github.com/Gricel-lee/VirtualMachine-Evochecker/tree/main/Viking%20and%20Evochecker/runtime
 
 ![image](https://user-images.githubusercontent.com/63869574/143891036-c50743b5-54d9-449c-a968-f3907a43f89a.png)
 
