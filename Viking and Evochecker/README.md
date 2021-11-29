@@ -10,6 +10,15 @@
 
 - To access/copy/paste data, see https://wiki.york.ac.uk/display/RCS/Copying+your+data+to+and+from+Viking 
 
+Copy and paste the following files from Evochecker into a "scratch" subfolder[^1]. The Evochecker.sh file is created in the next section.
+
+![image](https://user-images.githubusercontent.com/63869574/143890128-95a3d5ef-ebf7-43b8-9c6b-44ff3a06e870.png)
+
+- **Replace** the libs' subfolder, "runtime", for an older version of PRISM provided here[^2]: 
+
+![image](https://user-images.githubusercontent.com/63869574/143891036-c50743b5-54d9-449c-a968-f3907a43f89a.png)
+
+
 ## Run Evochecker
 ### Executable file to submit a job
 It is recommendable to create a .sh file to submit a job to Viking. 
@@ -33,6 +42,9 @@ In LD_LIBRARY_PATH, **USER** is your Viking user; **scratch** is the design Viki
 
 
 [^1]: See _IMPORTANT - Run your jobs from the high performance_ section at https://wiki.york.ac.uk/display/RCS/VK1%29+How+to+access+Viking
+
+[^2]: This is neccesary as the default compiler in Viking is an old version (4.8.5), and forcing Viking to use the "libs/runtime" libraries seems that it is not working. "However, to work around this, \[download\] prism version 4.6 and \[...\] replace the prism libraries in the runtime folder", Emad Alharbi. 
+
 
 ## Run file
 
