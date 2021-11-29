@@ -1,13 +1,23 @@
 # Running Evochecker from Viking
 
-## Set up
+## Setting up Viking
 
-## Executable file
-You must create an EvoChecker.sh file with the following:
+- Connect to the university Internet network. If you are outside of campus, make sure you are connected through a VPN using PulseSecure:
+
+![image](https://user-images.githubusercontent.com/63869574/143794614-5e85dbfa-6508-4c03-abf8-943abbdada8f.png)
+
+- Follow the **Terminal access from a UNIX/LINUX or MAC desktop** section on https://wiki.york.ac.uk/display/RCS/How+to+log+in+to+Viking 
+
+- To access/copy/paste data, see https://wiki.york.ac.uk/display/RCS/Copying+your+data+to+and+from+Viking 
+
+## Run Evochecker
+### Executable file to submit a job
+It is recommendable to create a .sh file to submit a job to Viking. 
+For Evochecker, we create an EvoChecker.sh file containing:
 
 ```
 #!/bin/bash
-#SBATCH --time=00:40:00 # Time limit hrs:min:sec
+#SBATCH --time=00:50:00 # Time limit hrs:min:sec
 #SBATCH --mem=5000
 #SBATCH --cpus-per-task=1
 module load lang/Java/11.0.2
@@ -19,10 +29,10 @@ echo "$LD_LIBRARY_PATH"
 java -jar EvoChecker.jar config.properties 
 
 ```
-where _
---time_
-For LD_LIBRARY_PATH, _USER_ is your Viking user, _scratch_ is the design Viking folder to run files, _EvoCheckerViking/ScadV2/libs/runtime_ is the path to the runtime folder, _config.properties_ is the Evochecker properties file. 
+In LD_LIBRARY_PATH, **USER** is your Viking user; **scratch** is the design Viking folder to run files[^1]; **EvoCheckerViking/ScadV2/libs/runtime** is the path to the runtime folder, **config.properties** is the Evochecker properties file. 
 
+
+[^1]: See _IMPORTANT - Run your jobs from the high performance_ section at https://wiki.york.ac.uk/display/RCS/VK1%29+How+to+access+Viking
 
 ## Run file
 
