@@ -23,13 +23,13 @@ Copy and paste the following files from Evochecker into a "scratch" subfolder[^1
 
 ## Run Evochecker
 ### Executable file to submit a job
-It is recommendable to create a .sh file to submit a job to Viking. 
+Create a .sh file to submit a job to Viking. 
 For Evochecker, we create an EvoChecker.sh file containing:
 
 ```
 #!/bin/bash
 #SBATCH --time=00:50:00 # Time limit hrs:min:sec
-#SBATCH --mem=5000
+#SBATCH --mem=5gb
 #SBATCH --cpus-per-task=1
 module load lang/Java/11.0.2
 module load compiler/GCC/8.2.0-2.31.1
@@ -54,7 +54,7 @@ In LD_LIBRARY_PATH, **USER** is your Viking user; **scratch** is the design Viki
 
 ![image](https://user-images.githubusercontent.com/63869574/143894178-ab36e910-8cb0-4a2a-87c0-6e6295b57b84.png)
 
-
+You can also use "**sbatch EvoChecker.sh**" to sumbit the job to Viking. 
 
 ## Possible Errors
 See section **Change libs folder** if you get a file saying:
@@ -80,7 +80,7 @@ java.lang.UnsatisfiedLinkError: /mnt/lustre/users/gnvf500/EvoCheckerViking/ScadV
 
 [^2]: This is neccesary as the default compiler in Viking is an old version (4.8.5), and forcing Viking to use the "libs/runtime" libraries does not seem to work. "However, to work around this, \[download\] prism version 4.6 and \[...\] replace the prism libraries in the runtime folder", Emad Alharbi. 
 
-[^3]: You can also use "**sbatch** EvoChecker.sh" to sumit a job to Viking. Not tested for Evochecker yet.
+[^3]: Not tested for Evochecker yet.
 
 [^4]: https://wiki.york.ac.uk/display/RCS/VK4%29+Job+script+configuration
 
