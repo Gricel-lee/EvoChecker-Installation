@@ -64,8 +64,23 @@ java.lang.UnsatisfiedLinkError: /mnt/lustre/users/gnvf500/EvoCheckerViking/ScadV
 ```
 
 
+## More about Vikings
+### Script template [^4]
+
+![image](https://user-images.githubusercontent.com/63869574/148259168-fbf62be9-ab8d-472e-9135-68956205448d.png)
+
+### Managing time [^4]
+"#SBATCH --time=02:00:00" 
+### Controlling memory [^4]
+"#SBATCH --mem=1gb"
+
+
+
 [^1]: See _IMPORTANT - Run your jobs from the high performance_ section at https://wiki.york.ac.uk/display/RCS/VK1%29+How+to+access+Viking
 
 [^2]: This is neccesary as the default compiler in Viking is an old version (4.8.5), and forcing Viking to use the "libs/runtime" libraries does not seem to work. "However, to work around this, \[download\] prism version 4.6 and \[...\] replace the prism libraries in the runtime folder", Emad Alharbi. 
 
 [^3]: You can also use "**sbatch** EvoChecker.sh" to sumit a job to Viking. Not tested for Evochecker yet.
+
+[^4]: https://wiki.york.ac.uk/display/RCS/VK4%29+Job+script+configuration
+
