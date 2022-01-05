@@ -10,7 +10,7 @@
 
 - To access/copy/paste data, see https://wiki.york.ac.uk/display/RCS/Copying+your+data+to+and+from+Viking 
 
-Copy and paste the following files from Evochecker into a "scratch" subfolder[^1] (only the Evochecker.sh file is created in the next section).
+Copy and paste the following files from Evochecker into a "scratch" subfolder[^1] (EvoChecker.jar is available here, and Evochecker.sh is created in the next section).
 
 ![image](https://user-images.githubusercontent.com/63869574/143893682-c9c60585-631c-458e-a8e8-7f3c72be841d.png)
 
