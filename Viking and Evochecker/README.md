@@ -54,10 +54,10 @@ In LD_LIBRARY_PATH, **USER** is your Viking user; **scratch** is the design Viki
 
 ![image](https://user-images.githubusercontent.com/63869574/143894178-ab36e910-8cb0-4a2a-87c0-6e6295b57b84.png)
 
-You can also use "**sbatch EvoChecker.sh**" to sumbit the job to Viking. You can check the status, ID and other info. using "**sacct**"
-
-![image](https://user-images.githubusercontent.com/63869574/148261280-b8d0422e-bf93-4801-b773-1a6cfa3f1622.png)
-
+You can also use:
+ - "**sbatch EvoChecker.sh**": to sumbit the job to Viking (you can close your PuTTY session if needed)
+ - **sacct**: to check your submitted jobs
+ - **scancel + jobID**: to cancel a job 
 
 
 
