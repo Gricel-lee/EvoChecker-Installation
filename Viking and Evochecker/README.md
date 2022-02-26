@@ -42,6 +42,10 @@ java -jar EvoChecker.jar config.properties
 ```
 In LD_LIBRARY_PATH, **USER** is your Viking user; **scratch** is the design Viking folder to run files[^1]; **EvoCheckerViking/ScadV2/libs/runtime** is the path to the runtime folder, **config.properties** is the Evochecker properties file. 
 
+You can modify the batch parameters (https://wiki.york.ac.uk/display/RCS/Physnodes+-+3%29+Submitting+Jobs+to+the+physics+cluster)
+
+![image](https://user-images.githubusercontent.com/63869574/155792200-b1a3b7ab-8698-432c-be37-7d53a6c40129.png)
+
 
 
 ### Run .sh file
@@ -56,9 +60,11 @@ In LD_LIBRARY_PATH, **USER** is your Viking user; **scratch** is the design Viki
 
 You can also use:
  - "**sbatch EvoChecker.sh**": to sumbit the job to Viking (you can close your PuTTY session if needed)
- - **sacct**: to check your submitted jobs
  - **scancel + jobID**: to cancel a job 
-
+ - **sacct**: to check your submitted jobs
+ - or **qstat -u user**:
+ - 
+![image](https://user-images.githubusercontent.com/63869574/155799924-657672e7-5e3e-4526-bf05-4fdf6d8bb5d0.png)
 
 
 ## Possible Errors
