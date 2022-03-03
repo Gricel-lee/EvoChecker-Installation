@@ -62,8 +62,8 @@ You can also use:
  - "**sbatch EvoChecker.sh**": to sumbit the job to Viking (you can close your PuTTY session if needed)
  - **scancel + jobID**: to cancel a job 
  - **sacct**: to check your submitted jobs
- - or **qstat -u user**:
- - 
+ - or **qstat -u user** (user's name)
+ - or **squeue --user=user** (second user is the user's name)
 ![image](https://user-images.githubusercontent.com/63869574/155799924-657672e7-5e3e-4526-bf05-4fdf6d8bb5d0.png)
 
 If more than 48hr is require, you can change the default partition: https://wiki.york.ac.uk/display/RCS/VK12%29+Available+Resource+Partitions+and+their+limits
@@ -71,12 +71,19 @@ If more than 48hr is require, you can change the default partition: https://wiki
 ![image](https://user-images.githubusercontent.com/63869574/156606835-cf3fe128-7717-4ab4-9de8-e798cbca9c58.png)
 
 
+
 ## Possible Errors
+
 See section **Change libs folder** if you get a file saying:
 ```
 Accepting from port: 8888
 java.lang.UnsatisfiedLinkError: /mnt/lustre/users/gnvf500/EvoCheckerViking/ScadV2/libs/runtime/libprism.so: /lib64/libstdc++.so.6: version `CXXABI_1.3.8' not found (required by /mnt/lustre/users/gnvf500/EvoCheckerViking/ScadV2/libs/runtime/libprism.so)
 ```
+
+### Submitted but not running
+Sometimes when a file is submitted, it may not run. Check **squeue --user=user**, column "NODELIST (REASON)"  will display a reason code if your job is being held.
+
+![image](https://user-images.githubusercontent.com/63869574/156643316-f4573432-588e-40ad-8c6d-c1e560103580.png)
 
 
 ## More about Vikings
