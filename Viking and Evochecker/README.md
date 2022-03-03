@@ -58,7 +58,7 @@ You can modify the batch parameters (https://wiki.york.ac.uk/display/RCS/Physnod
 
 ![image](https://user-images.githubusercontent.com/63869574/143894178-ab36e910-8cb0-4a2a-87c0-6e6295b57b84.png)
 
-You can also use:
+You can also use: [^5]
  - "**sbatch EvoChecker.sh**": to sumbit the job to Viking (you can close your PuTTY session if needed)
  - **scancel + jobID**: to cancel a job 
  -  - **scancel -u user**: to cancel all job  (user's name)
@@ -81,7 +81,7 @@ Accepting from port: 8888
 java.lang.UnsatisfiedLinkError: /mnt/lustre/users/gnvf500/EvoCheckerViking/ScadV2/libs/runtime/libprism.so: /lib64/libstdc++.so.6: version `CXXABI_1.3.8' not found (required by /mnt/lustre/users/gnvf500/EvoCheckerViking/ScadV2/libs/runtime/libprism.so)
 ```
 
-### Submitted but not running
+### Submitted but not running [^5]
 Sometimes when a file is submitted, it may not run. Check **squeue --user=user**, column "NODELIST (REASON)"  will display a reason code if your job is being held.
 
 ![image](https://user-images.githubusercontent.com/63869574/156643316-f4573432-588e-40ad-8c6d-c1e560103580.png)
@@ -106,4 +106,6 @@ Sometimes when a file is submitted, it may not run. Check **squeue --user=user**
 [^3]: Not tested for Evochecker yet.
 
 [^4]: https://wiki.york.ac.uk/display/RCS/VK4%29+Job+script+configuration
+
+[^5]: https://wiki.york.ac.uk/display/RCS/VK3%29+Submitting+Jobs+to+Viking
 
