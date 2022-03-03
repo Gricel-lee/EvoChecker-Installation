@@ -61,6 +61,7 @@ You can modify the batch parameters (https://wiki.york.ac.uk/display/RCS/Physnod
 You can also use:
  - "**sbatch EvoChecker.sh**": to sumbit the job to Viking (you can close your PuTTY session if needed)
  - **scancel + jobID**: to cancel a job 
+ -  - **scancel -u user**: to cancel all job  (user's name)
  - **sacct**: to check your submitted jobs
  - or **qstat -u user** (user's name)
  - or **squeue --user=user** (second user is the user's name)
