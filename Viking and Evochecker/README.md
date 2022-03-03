@@ -60,11 +60,12 @@ You can modify the batch parameters (https://wiki.york.ac.uk/display/RCS/Physnod
 
 You can also use: [^5]
  - "**sbatch EvoChecker.sh**": to sumbit the job to Viking (you can close your PuTTY session if needed)
- - **scancel + jobID**: to cancel a job 
- -  - **scancel -u user**: to cancel all job  (user's name)
+ - **scancel jobID**: to cancel a job 
+ - **scancel -u user**: to cancel all jobs
  - **sacct**: to check your submitted jobs
- - or **qstat -u user** (user's name)
- - or **squeue --user=user** (second user is the user's name)
+ - or **qstat -u user**
+ - or **squeue --user=user** (get code if something failed,column "NODELIST (REASON)")
+ - or **squeue --start -u user** (get the expected time to start job)
 ![image](https://user-images.githubusercontent.com/63869574/155799924-657672e7-5e3e-4526-bf05-4fdf6d8bb5d0.png)
 
 If more than 48hr is require, you can change the default partition: https://wiki.york.ac.uk/display/RCS/VK12%29+Available+Resource+Partitions+and+their+limits
