@@ -66,6 +66,10 @@ You can also use:
  - 
 ![image](https://user-images.githubusercontent.com/63869574/155799924-657672e7-5e3e-4526-bf05-4fdf6d8bb5d0.png)
 
+If more than 48hr is require, you can change the default partition: https://wiki.york.ac.uk/display/RCS/VK12%29+Available+Resource+Partitions+and+their+limits
+
+![image](https://user-images.githubusercontent.com/63869574/156606835-cf3fe128-7717-4ab4-9de8-e798cbca9c58.png)
+
 
 ## Possible Errors
 See section **Change libs folder** if you get a file saying:
