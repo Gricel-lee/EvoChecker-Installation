@@ -41,9 +41,9 @@ export LD_LIBRARY_PATH="/users/USER/scratch/EvoCheckerViking/SafeScadV2/libs/run
 export LD_LIBRARY_PATH="/users/USER/scratch/EvoCheckerViking/SafeScadV2/libs/:$LD_LIBRARY_PATH"         #path
 
 echo "$LD_LIBRARY_PATH"
-java -jar EvoChecker.jar config.properties 
-
+java -jar EvoChecker.jar config.properties
 ```
+
 In LD_LIBRARY_PATH, **USER** is your Viking user; **scratch** is the design Viking folder to run files[^1] (you MUST use this folder); **EvoCheckerViking/ScadV2/libs/runtime** is the path to the runtime folder, **config.properties** is the Evochecker properties file. 
 
 You can modify the batch parameters (https://wiki.york.ac.uk/display/RCS/Physnodes+-+3%29+Submitting+Jobs+to+the+physics+cluster)
@@ -54,16 +54,15 @@ You can modify the batch parameters (https://wiki.york.ac.uk/display/RCS/Physnod
 
 ### Run .sh file
 
-- First, the .sh file must be executable so do: chmod u=rwx,g=r-x,o=r-x 
+First, the .sh file must be executable so do: chmod u=rwx,g=r-x,o=r-x 
 
 ![image](https://user-images.githubusercontent.com/63869574/143779349-bcbdcc6f-2159-467e-bbf7-799542f215e2.png)
 
-- Go to the scratch subfolder where all the Evochecker files are and run it[^3]. The next example is in Windows using PuTTY:
+Go to the scratch subfolder where all the Evochecker files are and run it[^3]
 
-![image](https://user-images.githubusercontent.com/63869574/143894178-ab36e910-8cb0-4a2a-87c0-6e6295b57b84.png)
-
-You can also use: [^5]
- - ```sbatch EvoChecker.sh``` to sumbit the job to Viking (you can close your PuTTY session if needed)
+You can use: [^5]
+ - ```sbatch EvoChecker.sh``` to sumbit the job to Viking (you can close your session if needed, e.g., PuTTY session closed in Windows)
+ - ```.\Evochecker.sh ``` to run the job (cancelled if session ends, e.g., PuTTY session closed in Windows)
  - ```scancel jobID``` to cancel a job 
  - ```scancel -u user``` to cancel all jobs
  - ```sacct``` to check your submitted jobs
@@ -79,7 +78,9 @@ If more than 48hr is require, you can change the default partition: https://wiki
 
 
 
-## Possible Errors
+# Possible Errors
+
+### Accepting from port: 8888. java.lang.UnsatisfiedLinkError
 
 See section **Change libs folder** if you get a file saying:
 ```
