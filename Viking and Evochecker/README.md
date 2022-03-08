@@ -87,6 +87,31 @@ Sometimes when a file is submitted, it may not run. Check **squeue --user=user**
 
 ![image](https://user-images.githubusercontent.com/63869574/156643316-f4573432-588e-40ad-8c6d-c1e560103580.png)
 
+### Run out of memory
+You may need to select a node with bigger memory [^6].
+Add #SBATCH --partition=himem		
+Make sure you add it before executing the code or it won't be run.
+
+```
+#!/bin/bash
+#SBATCH --time=00:50:00 # Time limit hrs:min:sec
+#SBATCH --partition=himem		#https://wiki.york.ac.uk/display/RCS/VK12%29+Available+Resource+Partitions+and+their+limits
+#SBATCH --mem=5gb
+#SBATCH --cpus-per-task=1
+module load lang/Java/11.0.2
+module load compiler/GCC/8.2.0-2.31.1
+module load lang/Python/3.7.0-intel-2018b
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/users/USER/scratch/EvoCheckerViking/ScadV2/libs/runtime
+export LD_LIBRARY_PATH
+echo "$LD_LIBRARY_PATH"
+java -jar EvoChecker.jar config.properties 
+
+```
+
+### Run out of time
+As before, you may need to select a node with bigger memory [^6].
+Add #SBATCH --partition=week		
+Make sure you add it before executing the code or it won't be run.	
 
 ## More about Vikings
 ### Script template [^4]
@@ -110,3 +135,4 @@ Sometimes when a file is submitted, it may not run. Check **squeue --user=user**
 
 [^5]: https://wiki.york.ac.uk/display/RCS/VK3%29+Submitting+Jobs+to+Viking
 
+[^6]: https://wiki.york.ac.uk/display/RCS/VK12%29+Available+Resource+Partitions+and+their+limits
