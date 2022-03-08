@@ -1,6 +1,6 @@
 # Running Evochecker from Viking
 
-## Setting up Viking
+## Set up Viking
 
 - Connect to the university Internet network. If you are outside of campus, make sure you are connected through a VPN using PulseSecure:
 
@@ -21,10 +21,12 @@ Copy and paste the following files from Evochecker into a "scratch" subfolder[^1
 ![image](https://user-images.githubusercontent.com/63869574/143893629-22d0e0fc-6248-4e3d-bf0f-2a6f2c6fc4a0.png)
 
 
-## Run Evochecker
-### Executable file to submit a job
-Create a .sh file to submit a job to Viking. 
-For Evochecker, we create an EvoChecker.sh file containing:
+
+## Submit an Evochecker job
+
+### Executable .sh file
+
+A .sh file is needed to submit a job to Viking. We create **EvoChecker.sh** containing:
 
 ```
 #!/bin/bash
@@ -33,7 +35,7 @@ For Evochecker, we create an EvoChecker.sh file containing:
 #SBATCH --mail-user=youruser@email.com  # Where to send mail
 #SBATCH --time=48:00:00                 # Time limit hrs:min:sec (up to 48hr in default nodes)
 #SBATCH --mem=5gb                       #Up to 370gb aprox. in default nodes
-#SBATCH --cpus-per-task=15              # cpus required (1-15 tested)
+#SBATCH --cpus-per-task=1               # cpus required (1-15 tested)
 module load lang/Java/11.0.2
 module load compiler/GCC/9.3.0
 module load lang/Python/3.7.0-intel-2018b
@@ -42,14 +44,21 @@ export LD_LIBRARY_PATH="/users/USER/scratch/EvoCheckerViking/SafeScadV2/libs/:$L
 
 echo "$LD_LIBRARY_PATH"
 java -jar EvoChecker.jar config.properties
+# Other comment out configurations for easier run: #<-------
+#java -jar EvoChecker.jar safeSCAD-both-verified-DNNconfig.properties
+#java -jar EvoChecker.jar safeSCAD-v1-verified-DNNconfig.properties 
+#java -jar EvoChecker.jar safeSCAD-v2-verified-DNNconfig.properties 
+#java -jar EvoChecker.jar safeSCAD-with-non-verified-DNNconfig.properties 
+#java -jar EvoChecker.jar SafeSCAD-no-DNNconfig.properties
 ```
 
 In LD_LIBRARY_PATH, **USER** is your Viking user; **scratch** is the design Viking folder to run files[^1] (you MUST use this folder); **EvoCheckerViking/ScadV2/libs/runtime** is the path to the runtime folder, **config.properties** is the Evochecker properties file. 
 
-You can modify the batch parameters (https://wiki.york.ac.uk/display/RCS/Physnodes+-+3%29+Submitting+Jobs+to+the+physics+cluster)
+You can modify the batch parameters if needed (https://wiki.york.ac.uk/display/RCS/Physnodes+-+3%29+Submitting+Jobs+to+the+physics+cluster)
 
 ![image](https://user-images.githubusercontent.com/63869574/155792200-b1a3b7ab-8698-432c-be37-7d53a6c40129.png)
 
+You can also add more config.properties files with different parameters. In the example, I added them commented out.
 
 
 ### Run .sh file
@@ -103,18 +112,23 @@ Make sure you add it before executing the code or it won't be run.
 
 ```
 #!/bin/bash
-#SBATCH --time=00:50:00 # Time limit hrs:min:sec
-#SBATCH --partition=himem		#https://wiki.york.ac.uk/display/RCS/VK12%29+Available+Resource+Partitions+and+their+limits
-#SBATCH --mem=5gb
-#SBATCH --cpus-per-task=1
-module load lang/Java/11.0.2
-module load compiler/GCC/8.2.0-2.31.1
-module load lang/Python/3.7.0-intel-2018b
-LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/users/USER/scratch/EvoCheckerViking/ScadV2/libs/runtime
-export LD_LIBRARY_PATH
-echo "$LD_LIBRARY_PATH"
-java -jar EvoChecker.jar config.properties 
 
+#SBATCH --job-name=SafeScad             # Job name use for sending an email and print cmd info
+#SBATCH --partition=himem               #<-------
+#SBATCH --mail-type=BEGIN,END,FAIL      # Mail events (NONE, BEGIN, END, FAIL, ALL)
+#SBATCH --mail-user=youruser@email.com  # Where to send mail
+#SBATCH --time=48:00:00                 # Time limit hrs:min:sec (up to 48hr in default nodes)
+#SBATCH --mem=1TB                       #<-------
+#SBATCH --cpus-per-task=15              # cpus required (1-15 tested)
+module load lang/Java/11.0.2
+module load compiler/GCC/9.3.0
+module load lang/Python/3.7.0-intel-2018b
+export LD_LIBRARY_PATH="/users/USER/scratch/EvoCheckerViking/V2ExtraTime/SafeScadV2/libs/runtime/:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="/users/USER/scratch/EvoCheckerViking/V2ExtraTime/SafeScadV2/libs/:$LD_LIBRARY_PATH"
+
+echo "$LD_LIBRARY_PATH"
+
+java -jar EvoChecker.jar safeSCAD-both-verified-DNNconfig.properties
 ```
 
 ### Run out of time
