@@ -84,12 +84,15 @@ java.lang.UnsatisfiedLinkError: /mnt/lustre/users/gnvf500/EvoCheckerViking/ScadV
 
 ### Submitted but not running [^5]
 Sometimes when a file is submitted, it may not run. Check **squeue --user=user**, column "NODELIST (REASON)"  will display a reason code if your job is being held.
+In this example, the only job that is going to be executed is the one with "priority" on the last column. Meaning that it hasn't been schedule given that other jobs are in the queue before with higher priority. The rest of the jobs must be cancelled as they require computing resources that Viking cluster does not have.
 
 ![image](https://user-images.githubusercontent.com/63869574/156643316-f4573432-588e-40ad-8c6d-c1e560103580.png)
 
+Check also [^5]:
+_If your job has the start time of N/A and/or the REASON column state PartitionConfig, then you probably have requested resources that are not available on the cluster. In the above example job 36 has requested more CPUs than are available for jobs in the cluster._
+
 ### Run out of memory
-You may need to select a node with bigger memory [^6].
-Add #SBATCH --partition=himem		
+You may need to select a node with bigger memory [^6]. Add ```#SBATCH --partition=himem```.
 Make sure you add it before executing the code or it won't be run.
 
 ```
@@ -109,8 +112,8 @@ java -jar EvoChecker.jar config.properties
 ```
 
 ### Run out of time
-As before, you may need to select a node with bigger memory [^6].
-Add #SBATCH --partition=week		
+As before, you may need to select a node with bigger memory [^6]. Ad
+d ```#SBATCH --partition=week```.
 Make sure you add it before executing the code or it won't be run.	
 
 ## More about Vikings
