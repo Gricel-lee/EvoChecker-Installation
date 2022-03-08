@@ -28,19 +28,23 @@ For Evochecker, we create an EvoChecker.sh file containing:
 
 ```
 #!/bin/bash
-#SBATCH --time=00:50:00 # Time limit hrs:min:sec
-#SBATCH --mem=5gb
-#SBATCH --cpus-per-task=1
+#SBATCH --job-name=SafeScad             # Job name use for sending an email and print cmd info
+#SBATCH --mail-type=BEGIN,END,FAIL      # Mail events (NONE, BEGIN, END, FAIL, ALL)
+#SBATCH --mail-user=youruser@email.com  # Where to send mail
+#SBATCH --time=48:00:00                 # Time limit hrs:min:sec (up to 48hr in default nodes)
+#SBATCH --mem=5gb                       #Up to 370gb aprox. in default nodes
+#SBATCH --cpus-per-task=15              # cpus required (1-15 tested)
 module load lang/Java/11.0.2
-module load compiler/GCC/8.2.0-2.31.1
+module load compiler/GCC/9.3.0
 module load lang/Python/3.7.0-intel-2018b
-LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/users/USER/scratch/EvoCheckerViking/ScadV2/libs/runtime
-export LD_LIBRARY_PATH
+export LD_LIBRARY_PATH="/users/USER/scratch/EvoCheckerViking/SafeScadV2/libs/runtime/:$LD_LIBRARY_PATH" #path
+export LD_LIBRARY_PATH="/users/USER/scratch/EvoCheckerViking/SafeScadV2/libs/:$LD_LIBRARY_PATH"         #path
+
 echo "$LD_LIBRARY_PATH"
 java -jar EvoChecker.jar config.properties 
 
 ```
-In LD_LIBRARY_PATH, **USER** is your Viking user; **scratch** is the design Viking folder to run files[^1]; **EvoCheckerViking/ScadV2/libs/runtime** is the path to the runtime folder, **config.properties** is the Evochecker properties file. 
+In LD_LIBRARY_PATH, **USER** is your Viking user; **scratch** is the design Viking folder to run files[^1] (you MUST use this folder); **EvoCheckerViking/ScadV2/libs/runtime** is the path to the runtime folder, **config.properties** is the Evochecker properties file. 
 
 You can modify the batch parameters (https://wiki.york.ac.uk/display/RCS/Physnodes+-+3%29+Submitting+Jobs+to+the+physics+cluster)
 
@@ -59,13 +63,14 @@ You can modify the batch parameters (https://wiki.york.ac.uk/display/RCS/Physnod
 ![image](https://user-images.githubusercontent.com/63869574/143894178-ab36e910-8cb0-4a2a-87c0-6e6295b57b84.png)
 
 You can also use: [^5]
- - "**sbatch EvoChecker.sh**": to sumbit the job to Viking (you can close your PuTTY session if needed)
- - **scancel jobID**: to cancel a job 
- - **scancel -u user**: to cancel all jobs
- - **sacct**: to check your submitted jobs
- - or **qstat -u user**
- - or **squeue --user=user** (get code if something failed,column "NODELIST (REASON)")
- - or **squeue --start -u user** (get the expected time to start job)
+ - ```sbatch EvoChecker.sh``` to sumbit the job to Viking (you can close your PuTTY session if needed)
+ - ```scancel jobID``` to cancel a job 
+ - ```scancel -u user``` to cancel all jobs
+ - ```sacct``` to check your submitted jobs
+ - or ```qstat -u user```
+ - or ```squeue --user=user``` (get code if something failed,column "NODELIST (REASON)")
+ - or ```squeue --start -u user``` (get the expected time to start job)
+ - or ```sacct -u user --format=User,JobID,Jobname,partition,state,time,start,end,elapsed,averss,MaxRss,MaxVMSize,nnodes,ncpus,nodelist```
 ![image](https://user-images.githubusercontent.com/63869574/155799924-657672e7-5e3e-4526-bf05-4fdf6d8bb5d0.png)
 
 If more than 48hr is require, you can change the default partition: https://wiki.york.ac.uk/display/RCS/VK12%29+Available+Resource+Partitions+and+their+limits
