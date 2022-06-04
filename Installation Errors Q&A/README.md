@@ -31,7 +31,8 @@ If Evochecker is called from another project, make sure to add **evochecker.** w
 ![image](https://user-images.githubusercontent.com/63869574/128543214-5e18bf04-b32c-4e4a-985b-ba364745ca6a.png)
 
 
-## - Error 5: LD_LIBRARY_PATH has not been specified.
+## - Error 5: LD_LIBRARY_PATH has not been specifie, and
+## - Error: java.lang.UnsatisfiedLinkError: no prism in java.library.path:
 ![image](https://user-images.githubusercontent.com/63869574/128391061-32caa09a-e9e9-4c17-baa5-0d6a8a576637.png)
 
 
