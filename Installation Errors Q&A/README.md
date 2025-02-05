@@ -164,6 +164,12 @@ Install pandas from the CMD or terminal, e.g., for Ubuntu:
   
 ![image](https://user-images.githubusercontent.com/63869574/130229656-aa192232-af13-4d52-b593-78dc30000528.png)
 
-  
+
+## - Error: Parses config file but stops after printing "Starting evolution"
+![image](https://github.com/user-attachments/assets/0ba19fac-e520-46ba-bf07-1d6b5755a9d9)
+
+ ### Solution
+ Close Eclipse and open it again can solve this problem (even when ran from terminal/ .jar file).
+
 
   
